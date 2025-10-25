@@ -22,7 +22,7 @@ The following experiment results are produced with a personal NVIDIA RTX 4090 GP
 The average of rendering quality metrics, number of Gaussian primitives in the optimized 3DGS model, and training time, are reported. 
 ### 
 |  scene  | PSNR | N_GS | Time (sec) |
-|-----|-----|-----|-----|-----|-----|-----|
+|-----|-----|-----|-----|
 | 1747834320424  | 24.47 | 376,243 | 54.0 |
 | 1750342304509  | 24.88 | 392,151 | 57.2 | 
 | 1748748200211  | 24.53 | 379,967 | 54.8 | 
