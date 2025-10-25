@@ -11,7 +11,7 @@ To prepare the environment,
 
 To convert video files from the original dataset into image files suitable for training, set the data paths in ```convertimage.py``` to your local data folder, and run，
 ```
-python train_dash.py -s [datapath] --optimizer_type sparse_adam
+python train_dash.py -s YOUR/PATH/TO/DATASET/ --optimizer_type sparse_adam
 ```
 
 * ```--optimizer_type sparse_adam``` Use the Sparse Adam optimizer. 
@@ -20,7 +20,7 @@ python train_dash.py -s [datapath] --optimizer_type sparse_adam
 ## Results
 The following experiment results are produced with a personal NVIDIA RTX 4090 GPU.
 The average of rendering quality metrics, number of Gaussian primitives in the optimized 3DGS model, and training time, are reported. 
-### [Dataset]
+### 
 |  scene  | PSNR | N_GS | Time (sec) |
 |-----|-----|-----|-----|-----|-----|-----|
 | 1747834320424  | 24.47 | 376,243 | 54.0 |
