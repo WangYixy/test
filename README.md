@@ -7,22 +7,32 @@ To prepare the environment,
 
 2. Refer to the ```environment.yml``` for additional environment configuration.
 
-## Running Comand
+## Dataset Structure
 
-To convert video files from the original dataset into image files suitable for training, set the data paths in ```convertimage.py``` to your local data folder, and run，
+Please organize your dataset according to the directory structure shown in Round 2--eval_data_pinhole.
+
+## Running Training
+Run:
 ```
-python train_dash.py -s YOUR/PATH/TO/DATASET/ --optimizer_type sparse_adam
+bash run_training.sh
+```
+Inside run_training.sh, you may edit:
+* The path to your dataset
+* The name of the image folder (default: images_gt_downsampled)
+
+Training results will be saved automatically under the output/ directory.
+
+## Running Rendering & Evaluation
+Run:
+```
+bash run_evaluation.sh
 ```
 
-* ```--optimizer_type sparse_adam``` Use the Sparse Adam optimizer. 
- 
+This script performs:
+* Rendering test_data
+* Computing evaluation metrics (PSNR)
+
+The PSNR scores and training time (metrics.json) will be saved inside the corresponding output/ subdirectory.
 
 ## Results
-The following experiment results are produced with a personal NVIDIA RTX 4090 GPU.
-The average of rendering quality metrics, number of Gaussian primitives in the optimized 3DGS model, and training time, are reported. 
-### 
-|  scene  | PSNR | N_GS | Time (sec) |
-|-----|-----|-----|-----|
-| 1747834320424  | 24.47 | 376,243 | 54.0 |
-| 1750342304509  | 24.88 | 392,151 | 57.2 | 
-| 1748748200211  | 24.53 | 379,967 | 54.8 | 
+All experiment results are produced using an NVIDIA RTX 4090 GPU.
