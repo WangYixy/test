@@ -1,4 +1,4 @@
-# FlashTCGaussian: Accelerating Gaussian Splatting with Tensor Core
+# 
 
 ## Environment Setup
 To prepare the environment, 
